@@ -29,8 +29,16 @@ Feel free to customize the content of the cover letter to better suit your needs
 # Modify the content of the paragraph as needed
 story.append(Paragraph(f'Dear {companyName},', styleN))
 # ...
-story.append(Paragraph("Sincerely,", styleN))
-story.append(Paragraph("Insert Name Here", styleN))
+story.append(Paragraph(f'I'm interested in {companyName}.' **INSERT COVER LETTER CONTENT HERE**, styleN))
+```
+
+Make sure to change the string in main.py to your name
+
+```python
+if __name__ == "__main__":
+    company_name = input()
+    applicantName = "YOUR NAME HERE"
+    createLetter(applicantName, company_name)
 ```
 
 ## Note
