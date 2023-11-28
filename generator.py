@@ -1,3 +1,4 @@
+import os
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
@@ -21,7 +22,10 @@ def createLetter(companyName):
     story.append(Paragraph("Sincerely,", styleN))
     story.append(Paragraph("Noah Beidelman", styleN))
 
-    c  = Canvas(f'{companyName.lower()}CoverLetter.pdf')
+    output_folder = 'coverLetters'
+    os.makedirs(output_folder, exist_ok=True)
+
+    c  = Canvas(f'coverLetters/{companyName.lower()}CoverLetter.pdf')
     canvas_height = c._pagesize[1]
     f = Frame(inch, canvas_height - 9*inch - 0.8*inch, 6*inch, 9*inch, showBoundary=0)
     f.addFromList(story, c)
