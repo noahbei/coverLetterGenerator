@@ -26,4 +26,3 @@ def createLetter(companyName):
     f = Frame(inch, canvas_height - 9*inch - 0.8*inch, 6*inch, 9*inch, showBoundary=0)
     f.addFromList(story, c)
     c.save()
-createLetter("Samsung")
