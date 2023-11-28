@@ -11,7 +11,7 @@ styleN = ParagraphStyle(
     fontName='Helvetica'
 )
 
-def createLetter(companyName):
+def createLetter(applicantName, companyName):
     story = []
 
     #add some flowables
@@ -20,7 +20,7 @@ def createLetter(companyName):
     story.append(Paragraph(f'I am writing to express my interest in the software engineering role at {companyName}. As a dedicated and motivated computer science student with a passion for software engineering, I am excited about the opportunity to contribute my skills and knowledge to your dynamic team. Throughout my academic journey, I have gained a solid foundation in key programming languages such as C/C++, Python, HTML, CSS, and JavaScript, and I have successfully applied these skills in various hands-on projects, big and small. My strong problem-solving abilities and commitment to continuous learning make me confident in my ability to thrive in a challenging software engineering environment. I am eager to contribute my technical expertise to help drive your mission. Thank you for considering my application. I look forward to the possibility of discussing how my skills align with your needs.', styleN))
     story.append(Spacer(1, 0.2 * inch))
     story.append(Paragraph("Sincerely,", styleN))
-    story.append(Paragraph("Noah Beidelman", styleN))
+    story.append(Paragraph(applicantName, styleN))
 
     output_folder = 'coverLetters'
     os.makedirs(output_folder, exist_ok=True)
