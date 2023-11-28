@@ -25,7 +25,8 @@ def createLetter(applicantName, companyName):
     output_folder = 'coverLetters'
     os.makedirs(output_folder, exist_ok=True)
 
-    c  = Canvas(f'coverLetters/{companyName.lower()}CoverLetter.pdf')
+    companyFileName = ''.join(x for x in companyName.title() if x.isalnum())
+    c  = Canvas(f'coverLetters/{companyFileName}CoverLetter.pdf')
     canvas_height = c._pagesize[1]
     f = Frame(inch, canvas_height - 9*inch - 0.8*inch, 6*inch, 9*inch, showBoundary=0)
     f.addFromList(story, c)
