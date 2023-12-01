@@ -2,5 +2,5 @@ from generator import createLetter
 
 if __name__ == "__main__":
     company_name = input()
-    applicantName = "Noah Beidelman"
-    createLetter(applicantName, company_name)
+    applicant_name = "Noah Beidelman"
+    createLetter(applicant_name, company_name)
