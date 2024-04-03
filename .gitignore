@@ -1,2 +1,3 @@
-/__pycache__
-/coverLetters
+__pycache__
+coverLetters/*
+!coverLetters/CompanyNameCoverLetter.pdf
